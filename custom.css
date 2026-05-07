@@ -1,0 +1,30 @@
+/* Narrow collapsed state */
+#tabs-tabbar-container.left {
+  position: absolute !important;
+  height: 100% !important;
+  width: 42px !important;
+  min-width: 42px !important;
+  z-index: 25 !important;        /* Below Vivaldi's UI overlays (~200+) */
+  background-color: var(--colorBg) !important;
+  transition: width 0.2s ease-in-out, min-width 0.2s ease-in-out !important;
+  border-right: 1px solid var(--colorBorder);
+}
+
+/* Expanded state on hover */
+#tabs-tabbar-container.left:hover {
+  width: 200px !important;
+  min-width: 200px !important;
+}
+
+/* Push only the page rendering area */
+#browser:not(.fullscreen).tabs-left #webview-container {
+  margin-left: 42px !important;
+}
+
+div.button-popup {
+  z-index: 100;
+}
+
+[aria-label="Tab Bar"] {
+  justify-content: left !important;  
+}
