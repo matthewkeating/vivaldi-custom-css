@@ -16,6 +16,16 @@
   min-width: 200px !important;
 }
 
+/* Hide the scrollbar when collapsed */
+#tabs-tabbar-container.left .tab-strip::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.0);
+}
+
+/* Show the scroll bar on hover */
+#tabs-tabbar-container.left:hover .tab-strip::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
 /* Push only the page rendering area */
 #browser:not(.fullscreen).tabs-left #webview-container {
   margin-left: 42px !important;
